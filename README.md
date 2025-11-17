@@ -32,7 +32,7 @@ Once installed, you'll need to publish the config file:
 php artisan vendor:publish --provider="Ollieread\JWT\JWTServiceProvider"
 ```
 
-> [!INFO]
+> [!NOTE]
 > If you aren't using package auto-discovery, you'll need to add the service provider to the `providers` array in
 > `config/app.php`.
 
@@ -62,7 +62,7 @@ Here is an example of a generator:
 
 Every generator requires an algorithm, which is specified using the `algo` key.
 If one isn't present, the default algorithm will be used, which is `HS256`.
-Algorithms used the `\Ollieread\JWT\Algorithm` enum and are either symmetric or asymmetric, with asymmetric 
+Algorithms used the `\Ollieread\JWT\Algorithm` enum and are either symmetric or asymmetric, with asymmetric
 requiring two keys, and symmetric requiring one.
 
 #### Symmetric algorithms
@@ -147,9 +147,11 @@ This package also comes with a handful of default implementations, which you can
 
 - `\Ollieread\JWT\Claims\AppNameAsIssuer`* - Sets the `iss` claim to the application name (`app.name` in `config/app.
 php`).
-- `\Ollieread\JWT\Claims\AppNameInAudience` - Adds the application name (`app.name` in `config/app.php`) to the `aud` claim.
+- `\Ollieread\JWT\Claims\AppNameInAudience` - Adds the application name (`app.name` in `config/app.php`) to the `aud`
+  claim.
 - `\Ollieread\JWT\Claims\AppUrlAsIssuer`* - Sets the `iss` claim to the application URL (`app.url` in `config/app.php`).
-- `\Ollieread\JWT\Claims\AppUrlInAudience` - Adds the application URL (`app.url` in `config/app.php`) to the `aud` claim.
+- `\Ollieread\JWT\Claims\AppUrlInAudience` - Adds the application URL (`app.url` in `config/app.php`) to the `aud`
+  claim.
 - `\Ollieread\JWT\Claims\AsAudience`* - Sets the `aud` claim to the provided array of strings.
 - `\Ollieread\JWT\Claims\AsIssuer`* - Sets the `iss` claim to the provided string.
 - `\Ollieread\JWT\Claims\GeneratorNameAsIssuer`* - Sets the `iss` claim to the generator name (`users` in the example).
@@ -158,7 +160,8 @@ php`).
 - `\Ollieread\JWT\Claims\NotWithin`* - Sets the `nbf` claim to the issued at time plus a `string` interval.
 
 > [!NOTE]
-> Any marked with `*` are destructive, meaning that they will override any existing claims of the same name.
+> Any above that are marked with `*` are destructive, meaning that they will override any existing claims of the same
+> name.
 
 ## Usage
 
