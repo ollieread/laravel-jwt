@@ -1,0 +1,38 @@
+{
+  "name"        : "ollieread/laravel-jwt",
+  "description" : "A JWT generator for Laravel",
+  "type"        : "library",
+  "require"     : {
+    "php"              : "^8.2",
+    "lcobucci/jwt"     : "^5.6",
+    "laravel/framework": "^12.38"
+  },
+  "require-dev" : {
+    "larastan/larastan"  : "^3.8",
+    "orchestra/testbench": "^10.6"
+  },
+  "license"     : "MIT",
+  "autoload"    : {
+    "psr-4": {
+      "Ollieread\\JWT\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Ollieread\\JWT\\Tests\\": "tests/"
+    }
+  },
+  "authors"     : [
+    {
+      "name" : "Ollie Read",
+      "email": "code@ollieread.com"
+    }
+  ],
+  "extra"       : {
+    "laravel": {
+      "providers": [
+        "Ollieread\\JWT\\JWTServiceProvider"
+      ]
+    }
+  }
+}
