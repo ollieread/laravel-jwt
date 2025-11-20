@@ -13,8 +13,7 @@ You can read more about it on their [website](https://lcobucci-jwt.readthedocs.i
 The following is a list of features I want this package to provider.
 
 - [x] JWT Generation
-- [ ] JWT Parsing
-- [ ] JWT Verification
+- [x] JWT Parsing
 - [ ] JWT Refreshing
 - [ ] JWT Revoking
 
